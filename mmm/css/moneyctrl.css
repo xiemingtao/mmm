@@ -1,0 +1,13 @@
+/*字体px处理*/
+body {
+  font-size: 14px;
+}
+[data-dpr="2"] body {
+  font-size: 28px;
+}
+[data-dpr="3"] body {
+  font-size: 42px;
+}
+.productList li {
+  border-bottom: none;
+}

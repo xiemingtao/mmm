@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <title>商品详情</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <div class="logo fl">
+      <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+    
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  <!--搜索-->
+  <div class="mm_seaech">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!--内容-->
+  <div class="box_txt">
+  
+  </div>
+  <!--评价-->
+  <div class="evaluate">
+    <div class="evaluate_title">
+      <h3>网友评价</h3>
+    </div>
+    <ul class="comment ">
+      <!--坑-->
+    </ul>
+  </div>
+  
+  <div class="product_target">
+    <a href="moneyctrl.html">
+      <button>查看更多评价>></button>
+    </a>
+  
+  </div>
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="./js/product.js"></script>
+<script type="text/template" id="tvTPL">
+  {{each result v i}}
+  <!--面包导航-->
+  <div class='mbNav'>
+    <ul class="clearfix">
+      <li><a href="index.html">首页></a></li>
+      <li><a href="category.html">全部分类></a></li>
+      <li><a href="javascript:;" class="txt-cut">{{name}}</a></li>
+    </ul>
+  </div>
+  <!--标题-->
+  <div class="protitle">
+    <h3 class="title">{{v.productName}}</h3>
+    {{# v.productImg}}
+    <div class="option clearfix">
+      <a href="javascript:;">比价购买</a>
+      <a href="javascript:;">比价购买</a>
+      <a href="javascript:;">比价购买</a>
+    </div>
+    {{# v.bjShop}}
+    <!--<div class="goshop clearfix">-->
+      <!--<a href="javascript:;" class="icon"><img src="./images/slogo.png" alt=""></a>-->
+      <!--<a href="javscript:;" class="shop">京东商城</a>-->
+      <!--<a href="javscript:;" class="price">&yen1999</a>-->
+      <!--<a href="javscript:;" class="buy"><span>立即购买</span></a>-->
+    <!--</div>-->
+  </div>
+  {{ /each}}
+</script>
+<script type='text/template' id="evaluateTpl">
+  {{each result v i}}
+  <li>
+    <div class="comment_title">
+      <p class=" clearfix">
+        <span class="user">{{v.comName}}</span>
+        <span class="date">{{v.comTime}}</span>
+      </p>
+    
+      <p class="goBuy">{{v.comFrom}}</p>
+    </div>
+    <div class="comment_content">
+     {{v.comContent}}
+    </div>
+  </li>
+  {{/each}}
+</script>
+

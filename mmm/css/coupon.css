@@ -1,0 +1,32 @@
+/*字体px处理*/
+body {
+  font-size: 14px;
+}
+[data-dpr="2"] body {
+  font-size: 28px;
+}
+[data-dpr="3"] body {
+  font-size: 42px;
+}
+.cpList {
+  background-color: #fff;
+  padding: 0.4rem;
+}
+.cpList a {
+  margin: 0 0 0.2rem 2%;
+  float: left;
+  width: 31%;
+  border: 1px solid #ccc;
+  padding: 0.13333333rem 0;
+}
+.cpList a img {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  margin: 0 auto;
+}
+.cpList a p {
+  text-align: center;
+}
+.mm_header {
+  background-color: #F4483E;
+}

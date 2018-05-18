@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>首页</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <div class="logo fl">
+      <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+    
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  
+  <div class="mm_seaech">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!--菜单导航-->
+  <div class="mm_nav">
+    <ul class="clearfix">
+      <!--坑-->
+    </ul>
+  </div>
+  <!--商品-->
+  <div class="mm_product">
+    <div class="product_title clearfix">
+      <p class="fl">超值折扣推荐</p>
+      <a href="" class=fr>
+        <img src="images/more.png" alt="">
+      </a>
+    </div>
+    <ul class="productList">
+    <!--大坑-->
+    </ul>
+    <div class="product_target">
+      <a href="moneyctrl.html">
+        <button>更多优惠信息>></button>
+      </a>
+      
+    </div>
+    <div class="product_title clearfix">
+      <p class="fl">品牌排行</p>
+      <a href="#" class="fr">
+        <img src="images/more.png" alt="">
+      </a>
+    </div>
+  </div>
+  <!--更多优惠-->
+  
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script type="text/template" id="navTpl">
+  {{ each result v i}}
+  <li data-index="{{v.indexmenuId}}" class="{{v.indexmenuId==7?'current':''}} {{v.indexmenuId>7?'item':''}}" data-id="{{v._id}}">
+    <a href="{{v.titlehref}}">
+      {{# v.img}}
+      <p>{{v.name}}</p>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script type="text/template" id="productTpl">
+  {{ each result v i}}
+  <li data-productId="{{v.productId}}">
+    <a href="moneyproduct.html?productId={{v.productId}}">
+      <div class="img fl">
+        {{# v.productImg2}}
+      </div>
+      <div class="info">
+        <p class="info_title">{{v.productName}}</p>
+        <p class="price">{{v.productPinkage}}</p>
+        <p class="time">
+          <span>{{v.productFrom}}|10-25 14:10</span>
+          <span class="fr"> <i class="icon_comment"></i>{{v.productComCount}}</span>
+        </p>
+    
+      </div>
+    </a>
+  </li>
+  {{ /each}}
+</script>

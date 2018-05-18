@@ -1,0 +1,128 @@
+/*字体px处理*/
+body {
+  font-size: 14px;
+}
+[data-dpr="2"] body {
+  font-size: 28px;
+}
+[data-dpr="3"] body {
+  font-size: 42px;
+}
+.protitle {
+  background-color: #fff;
+}
+.protitle .title {
+  line-height: 1.06666667rem;
+  text-align: center;
+  font-size: 16px;
+}
+[data-dpr="2"] .protitle .title {
+  font-size: 32px;
+}
+[data-dpr="3"] .protitle .title {
+  font-size: 48px;
+}
+.protitle img {
+  width: 5.33333333rem;
+  margin: 0 auto;
+}
+.protitle .option {
+  padding-top: 0.26666667rem;
+  border-bottom: 2px solid #C14D00;
+}
+.protitle .option a {
+  float: left;
+  display: block;
+  width: 33.3%;
+  height: 0.90666667rem;
+  line-height: 0.90666667rem;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  border-top: 1px solid #C14D00;
+  background-image: linear-gradient(to bottom, #ffce48, #ffbe09);
+  border-right: 1px solid #C14D00;
+}
+[data-dpr="2"] .protitle .option a {
+  font-size: 32px;
+}
+[data-dpr="3"] .protitle .option a {
+  font-size: 48px;
+}
+.protitle .option a:last-child {
+  border-right: none;
+}
+.protitle .p_pic {
+  padding: 0.26666667rem;
+}
+.protitle .p_pic img {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0;
+}
+.evaluate .evaluate_title {
+  height: 1.01333333rem;
+  font-size: 16px;
+  background-color: #dbdbdb;
+  text-align: center;
+  line-height: 1.01333333rem;
+  border-top: 2px solid #222;
+}
+[data-dpr="2"] .evaluate .evaluate_title {
+  font-size: 32px;
+}
+[data-dpr="3"] .evaluate .evaluate_title {
+  font-size: 48px;
+}
+.evaluate .comment {
+  padding: 0.26666667rem;
+  background-color: #fff;
+}
+.evaluate .comment li {
+  padding: 0.26666667rem;
+  border-bottom: 1px solid #ccc;
+}
+.evaluate .comment .comment_title {
+  color: #666;
+}
+.evaluate .comment .comment_title .user,
+.evaluate .comment .comment_title .date,
+.evaluate .comment .comment_title .goBuy {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  font-size: 14px;
+}
+[data-dpr="2"] .evaluate .comment .comment_title .user,
+[data-dpr="2"] .evaluate .comment .comment_title .date,
+[data-dpr="2"] .evaluate .comment .comment_title .goBuy {
+  font-size: 28px;
+}
+[data-dpr="3"] .evaluate .comment .comment_title .user,
+[data-dpr="3"] .evaluate .comment .comment_title .date,
+[data-dpr="3"] .evaluate .comment .comment_title .goBuy {
+  font-size: 42px;
+}
+.evaluate .comment .comment_title .user {
+  width: 50%;
+  float: left;
+}
+.evaluate .comment .comment_title .date {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.evaluate .comment .comment_title .goBuy {
+  text-align: right;
+}
+.evaluate .comment .comment_content {
+  padding-top: 0.26666667rem;
+  font-size: 16px;
+  color: #666666;
+  line-height: 0.53333333rem;
+}
+[data-dpr="2"] .evaluate .comment .comment_content {
+  font-size: 32px;
+}
+[data-dpr="3"] .evaluate .comment .comment_content {
+  font-size: 48px;
+}

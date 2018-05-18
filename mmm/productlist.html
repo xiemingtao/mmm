@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="css/productlist.css">
+  <title>商品列表</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <div class="logo fl">
+      <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+    
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  <!--搜索-->
+  <div class="mm_seaech">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!--导航列表-->
+  
+  <div class="mm_product">
+    
+    <!--大坑-->
+  </div>
+  <div class="pagesOver clearfix">
+    <div class="item fl">
+      
+      <a href="javascript:;" class="prev_page">上一页</a>
+    
+    </div>
+    <div class="item fl">
+      <select class="selecList">
+
+      </select>
+    </div>
+    <div class="item fl">
+      
+      
+      <a href="javascript:;" class="next_page">下一页</a>
+    
+    </div>
+  </div>
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+
+<script src="js/productlist.js"></script>
+<script type="text/template" id=proListTpl>
+  <!--面包导航-->
+  <div class='mbNav'>
+    <ul class="clearfix">
+      <li><a href="index.html">首页></a></li>
+      <li><a href="category.html">全部分类></a></li>
+      <li><a href="javascript:;" class="txt-cut">{{name}}</a></li>
+    </ul>
+  </div>
+  <!--商品列表-->
+  <ul class="productList">
+    {{ each result v i}}
+    <li data-productId="{{v.productId}}">
+      <a href="product.html?productid={{v.productId}}&name={{v.productName}}">
+        <div class="img fl">
+          {{# v.productImg}}
+        </div>
+        <div class="info">
+          <p class="info_title">{{v.productName}}</p>
+          <p class="price">{{v.productPrice}}</p>
+          <p class="time">
+            <span>{{v.productQuote}}</span>
+            <span class="fr"> <i class="icon_comment"></i>{{v.productCom}}</span>
+          </p>
+        
+        </div>
+      </a>
+    </li>
+    {{ /each}}
+  </ul>
+  </div>
+</script>

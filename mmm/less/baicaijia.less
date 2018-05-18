@@ -1,0 +1,137 @@
+@import "fonts";
+
+.bcjNav {
+  background-color: #fff;
+  overflow: hidden;
+  .warp {
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    a {
+      display: block;
+      line-height: 80rem/@base;
+      height: 80rem/@base;
+      .font_dpr(14px);
+      padding: 0 15rem/@base;
+      &.current {
+        border-bottom: 2px solid #F4483E;
+        color: #F4483E;
+      }
+    }
+  }
+
+}
+
+.bcjsearch {
+  float: right;
+  padding: 16rem/@base;
+  img {
+    width: 48rem/@base;
+    height: 48rem/@base;
+  }
+}
+
+.list {
+  li {
+    margin-top: 10rem/@base;
+    background-color: #fff;
+    padding: 20rem/@base 10rem/@base;
+  }
+  .img_left {
+    float: left;
+    margin-right: 20rem/@base;
+    img {
+      width: 250rem /@base;
+      height: 250rem/@base;
+    }
+  }
+  .info_top {
+    overflow: hidden;
+
+    .top_title {
+      .font_dpr(16px);
+    }
+    .pic {
+      color: red;
+      overflow: hidden;
+      line-height: 60rem/@base;
+      del {
+        color: #ccc;
+        margin-left: 30rem/@base;
+      }
+    }
+    .bar {
+      i {
+        display: inline-block;
+        position: relative;
+        width: 164rem /@base;
+        height: 25rem /@base;
+        border-radius: 20rem/@base;
+        border: 1px solid #fc353a;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: #FFB7B7;
+      }
+      em {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #fc353a;
+        border-radius: 20rem/@base;
+      }
+      span {
+        position: absolute;
+        display: block;
+        color: #fff;
+        width: 100%;
+        left: 0;
+        top: 0;
+        line-height: 25rem/@base;
+        height: 100%;
+        text-align: center;
+        .font_dpr(12px);
+      }
+      b {
+        color: #fc353a;
+        font-weight: normal;
+        .font_dpr(12px);
+        vertical-align: 5rem/@base;
+        display: inline-block;
+        margin-left: 20rem/@base;
+      }
+
+    }
+    .target_juan {
+      padding-top: 30rem/@base;
+      a {
+        &:nth-of-type(1) {
+          float: left;
+          padding: 0 10rem/@base;
+          display: inline-block;
+          .font_dpr(12px);
+          border: 1px dashed #e4393c;
+          height: 50rem/@base;
+          line-height: 50rem/@base;
+          color: #e4393c;
+        }
+        &:last-of-type {
+          float: right;
+          height: 60rem/@base;
+          line-height: 60rem/@base;
+          color: #fff;
+          padding: 0 10rem/@base;
+          background: #FF5E5D;
+          border-radius: 5rem/@base;
+        }
+      }
+    }
+
+  }
+}
+
+.mm_header {
+  background-color: #F4483E;
+
+}

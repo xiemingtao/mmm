@@ -1,0 +1,55 @@
+/*字体px处理*/
+body {
+  font-size: 14px;
+}
+[data-dpr="2"] body {
+  font-size: 28px;
+}
+[data-dpr="3"] body {
+  font-size: 42px;
+}
+.navList .List {
+  padding-bottom: 0.66666667rem;
+  background-color: #fff;
+}
+.navList li .title {
+  background-color: #eee;
+  display: block;
+  position: relative;
+  height: 1.06666667rem;
+  font-size: 18px;
+  padding: 0 0.4rem;
+  line-height: 1.06666667rem;
+  border-bottom: 1px solid #ccc;
+}
+[data-dpr="2"] .navList li .title {
+  font-size: 36px;
+}
+[data-dpr="3"] .navList li .title {
+  font-size: 54px;
+}
+.navList li .title img {
+  width: 0.64rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.21333333rem;
+}
+.navList li .smList a {
+  float: left;
+  width: 33.3%;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+[data-dpr="2"] .navList li .smList a {
+  font-size: 28px;
+}
+[data-dpr="3"] .navList li .smList a {
+  font-size: 42px;
+}
+.navList li .hide {
+  display: none;
+}

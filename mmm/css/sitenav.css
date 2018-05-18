@@ -1,0 +1,39 @@
+/*字体px处理*/
+body {
+  font-size: 14px;
+}
+[data-dpr="2"] body {
+  font-size: 28px;
+}
+[data-dpr="3"] body {
+  font-size: 42px;
+}
+.navlist {
+  padding: 0.4rem;
+}
+.navlist li {
+  margin: 0 0 0.2rem 0.2rem;
+}
+.navlist a {
+  display: block;
+  padding: 0.26666667rem 0.24rem;
+  border: 1px solid #ccc;
+}
+.navlist a img {
+  width: 0.53333333rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.navlist a p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 0.13333333rem;
+}
+[data-dpr="2"] .navlist a p {
+  font-size: 28px;
+}
+[data-dpr="3"] .navlist a p {
+  font-size: 42px;
+}

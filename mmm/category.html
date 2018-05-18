@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/category.css">
+  <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <div class="logo fl">
+      <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+    
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  <!--搜索-->
+  <div class="mm_seaech">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <!--导航列表-->
+  <div class="navList">
+    <ul class="List">
+    
+    </ul>
+  </div>
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="./js/category.js"></script>
+<script type="text/template" id="listTpl">
+{{ each result v i}}
+<li>
+  <a href="javascript:;" data-id="{{v.titleId}}"  class="title">{{v.title}}
+    <img src="./images/arrow.png" alt="">
+  </a>
+  <div class="smList clearfix hide" >
+  
+  </div>
+</li>
+  {{ /each }}
+</script>
+<script type="text/template" id="smListTpl">
+  {{each result v i}}
+  <a href="productlist.html?categoryId={{v.categoryId}}&name={{v.category}}" data-id='{{v.categoryId}}'>{{v.category}}</a>
+  {{/each}}
+</script>

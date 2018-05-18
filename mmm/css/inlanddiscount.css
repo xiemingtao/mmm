@@ -1,0 +1,63 @@
+/*字体px处理*/
+body {
+  font-size: 14px;
+}
+[data-dpr="2"] body {
+  font-size: 28px;
+}
+[data-dpr="3"] body {
+  font-size: 42px;
+}
+.inlans_list {
+  padding-top: 0.26666667rem;
+  background-color: #fff;
+}
+.inlans_list li {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+}
+.inlans_list li:nth-child(2n+1) {
+  border-right: 1px solid #ccc;
+}
+.inlans_list li a {
+  display: block;
+  padding: 0.26666667rem;
+}
+.inlans_list li img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+}
+.inlans_list .info {
+  padding-top: 0.26666667rem;
+}
+.inlans_list .info .info_date {
+  font-size: 12px;
+  color: grey;
+}
+[data-dpr="2"] .inlans_list .info .info_date {
+  font-size: 24px;
+}
+[data-dpr="3"] .inlans_list .info .info_date {
+  font-size: 36px;
+}
+.inlans_list .info_title,
+.inlans_list .info_price {
+  font-size: 14px;
+  padding-left: 0.06666667rem;
+}
+[data-dpr="2"] .inlans_list .info_title,
+[data-dpr="2"] .inlans_list .info_price {
+  font-size: 28px;
+}
+[data-dpr="3"] .inlans_list .info_title,
+[data-dpr="3"] .inlans_list .info_price {
+  font-size: 42px;
+}
+.inlans_list .info_title {
+  width: 100%;
+}
+.inlans_list .info_price {
+  color: #FF6112;
+  line-height: 0.4rem;
+}

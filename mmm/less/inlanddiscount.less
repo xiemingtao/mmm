@@ -1,0 +1,45 @@
+
+
+@import "fonts";
+
+.inlans_list{
+  padding-top: 20rem/@base;
+  background-color: #fff;
+  li{
+    width: 50%;
+    border-bottom: 1px solid #ccc;
+
+    &:nth-child(2n+1){
+      border-right: 1px solid #ccc;
+    }
+    a{
+      display: block;
+      padding: 20rem/@base;
+    }
+    img{
+      width: 300rem/@base;
+      height: 300rem/@base;
+      margin: 0 auto;
+    }
+
+  }
+  .info{
+    padding-top: 20rem/@base;
+
+    .info_date{
+      .font_dpr(12px);
+      color: grey;
+    }
+  }
+  .info_title,.info_price{
+    .font_dpr(14px);
+    padding-left: 5rem/@base;
+  }
+  .info_title{
+    width: 100%;
+  }
+  .info_price{
+    color: #FF6112;
+    line-height: 30rem/@base;
+  }
+}

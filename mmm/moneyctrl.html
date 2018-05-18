@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moneyctrl.css">
+  <title>省钱控</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <a href="index.html" class="icon_back">
+      <img src="images/icback.svg" alt="">
+    </a>
+    <div class="header_title">
+      <h3>省钱控-最新优惠</h3>
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  
+  
+  <!--商品-->
+  <div class="mm_product">
+  
+  <!--大坑-->
+  </div>
+
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/moneyctrl.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script type="text/template" id="productTpl">
+  <ul class="productList">
+    {{ each result v i}}
+    <li data-productId="{{v.productId}}">
+      <a href="moneyproduct.html?productId={{v.productId}}">
+        <div class="img fl">
+          {{# v.productImg2}}
+        </div>
+        <div class="info">
+          <p class="info_title">{{v.productName}}</p>
+          <p class="price">{{v.productPinkage}}</p>
+          <p class="time">
+            <span>{{v.productFrom}}|10-25 14:10</span>
+            <span class="fr"> <i class="icon_comment"></i>{{v.productComCount}}</span>
+          </p>
+        
+        </div>
+      </a>
+    </li>
+    {{ /each}}
+  </ul>
+  <div class="pagesOver clearfix">
+    <div class="item fl">
+      {{if prev < 0}}
+      <a href="javascriipt:;" class="prev_page">上一页</a>
+      {{else}}
+      <a href="moneyctrl.html?currentPage={{prev}}" class="prev_page">上一页</a>
+      {{/if}}
+    </div>
+    <div class="item fl">
+      <select class="selecList">
+        <%
+        var data = pages;
+        for(i=1; i < data ;i++){  %>
+        <% if(i === prev+1){ %>
+          <option selected value="{{i}}">{{i}}/15</option>
+        <% }else {%>
+          <option value="{{i}}">{{i}}/15</option>
+        <% }%>
+       <% }%>
+       
+      </select>
+    </div>
+    <div class="item fl">
+      {{if next >= pages}}
+      <a href="javascript:;" class="next_page">下一页</a>
+      {{else}}
+      <a href="moneyctrl.html?currentPage={{next}}" class="next_page">下一页</a>
+      {{/if}}
+    </div>
+  </div>
+</script>

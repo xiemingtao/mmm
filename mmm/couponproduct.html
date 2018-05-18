@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/couponproduct.css">
+  <title>优惠券</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <a href="index.html" class="icon_back">
+      <img src="images/icback.svg" alt="">
+    </a>
+    <div class="header_title">
+      <h3>优惠券</h3>
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  
+  <!---->
+  <ul class="productList">
+  
+  </ul>
+ 
+  
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+ 
+</div>
+<!--模态框-->
+<div class="modal">
+  <img src="./images/product.jpg" alt="">
+</div>
+</body>
+</html>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/couponproduct.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script type="text/template" id="cpProListTpl">
+  {{ each result v i}}
+  <li>
+    <a href="javascript:;">
+      <div class="img fl">
+        {{# v.couponProductImg}}
+      </div>
+      <div class="info">
+        <p class="info_title">{{v.couponProductName}}</p>
+        <p class="price">{{v.couponProductPrice}}</p>
+        <p class="time">
+          <span>{{v.couponProductTime}}</span>
+        </p>
+      
+      </div>
+    </a>
+  </li>
+  {{ /each}}
+</script>
+

@@ -1,0 +1,413 @@
+@import "base";
+@import "fonts";
+
+//头部
+.mm_header {
+  position: relative;
+  height: 98rem/@base;
+  background-color: #FF841D;
+  width: 100%;
+  padding: 0 98rem/@base;
+  a {
+    display: block;
+  }
+  .logo {
+    position: absolute;
+    padding-left: 33rem/@base;
+    padding-top: 24rem/@base;
+    left: 0;
+    img {
+      width: 371rem/@base;
+    }
+
+  }
+
+  .appDow {
+    padding-right: 15rem/@base;
+    padding-top: 15rem/@base;
+    position: absolute;
+    right: 0;
+    top: 0;
+    img {
+      width: 68rem /@base;
+      height: 68rem /@base;
+    }
+  }
+  h3 {
+    font-weight: 400;
+    .font_dpr(14px)
+  }
+}
+
+//底部
+.mm_footer {
+  margin-top: 50rem/@base;
+  .target_list {
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
+    .font_dpr(14px);
+    li {
+      width: 33.3%;
+      float: left;
+      border-right: 1px solid #ccc;
+
+      &:last-child{
+        border-right: none;
+      }
+      img {
+        display: inline-block;
+        width: 30rem/ @base;
+        height: 30rem/ @base;
+        vertical-align: middle;
+      }
+      a {
+        text-align: center;
+        display: block;
+        height: 65rem/@base;
+        line-height: 65rem/@base;
+      }
+    }
+  }
+
+  .footer_mes{
+    text-align: center;
+    padding: 36rem/@base 0;
+    .font_dpr(14px);
+
+    a{
+      &.current{
+        color: red;
+      }
+    }
+  }
+}
+
+//搜索框公共样式
+.mm_seaech {
+  width: 100%;
+  height: 100rem/@base;
+  background-color: #fff;
+  padding: 22rem/@base 150rem/@base 22rem/@base 20rem/@base;
+  position: relative;
+  input {
+    width: 100%;
+    height: 56rem/@base;
+    background-color: #F1F1F1;
+    border-radius: 28rem/@base;
+    padding-left: 40rem/@base;
+  }
+  button {
+    width: 120rem /@base;
+    height: 56rem/@base;
+    background-color: #FF841D;
+    border-radius: 40rem/@base;
+    color: #fff;
+    .font_dpr(14px);
+    position: absolute;
+    right: 15rem/@base;
+    top: 22rem/@base;
+  }
+}
+//首页产品省钱控公共区域
+.productList {
+  li {
+
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    a{
+      display: inline-block;
+      padding: 20rem/@base 15rem/@base;
+      position: relative;
+    }
+  }
+  .img {
+    margin-right: 30rem/@base;
+    img {
+      width: 200rem/@base;
+      height: 200rem/@base;
+    }
+  }
+  .info {
+    overflow: hidden;
+    //height: 260rem/@base;
+    .info_title {
+      .font_dpr(16px);
+      //margin-top: 35rem/@base;
+    }
+    .price {
+      color: red;
+      .font_dpr(16px);
+      line-height: 60rem/@base;
+    }
+    .time {
+      padding-top:45rem/@base;
+      color: #666;
+
+      .icon_comment {
+        line-height: 25rem/@base;
+        background: url(../images/comment.svg) center no-repeat;
+        width: 25rem /@base;
+        height: 25rem/@base;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+//头部公共区域
+.mm_header{
+  .icon_back{
+    display: block;
+    position: absolute;
+    padding: 35rem/@base;
+    left: 0;
+    img {
+      width: 28rem /@base;
+      height: 28rem /@base;
+    }
+
+  }
+
+  .header_title{
+    line-height: 98rem/@base;
+    .font_dpr(24px);
+    text-align: center;
+    color: #fff;
+  }
+}
+
+//面包导航公共样式
+.mbNav {
+  margin-top: 20rem/@base;
+  background-color: #5A5A5A;
+  padding-left: 20rem/@base;
+  li {
+    float: left;
+    height: 80rem/@base;
+    a {
+      color: #fff;
+      display: block;
+      height: 80rem/@base;
+      line-height: 80rem/@base;
+      padding: 0 5rem/@base;
+      .font_dpr(14px)
+    }
+
+    .txt-cut {
+      max-width:400rem/@base ;
+    }
+  }
+}
+
+//分类导航公共样式
+.pagesOver{
+  background-color: #fff;
+  padding: 30rem/@base 0;
+  .item{
+    width: 33.3%;
+    height: 70rem/@base;
+    text-align: center;
+    padding: 0 40rem/@base;
+    a{
+      display: block;
+      height: 70rem/@base;
+      line-height: 70rem/@base;
+      height: 100%;
+      background-color: #eee;
+      .font_dpr(16px);
+      background-image: linear-gradient(to bottom, #eee,#d6d6d6);
+      border: 1px solid #ccc;
+      border-radius: 5rem/@base;
+    }
+
+    .selecList{
+      width: 100%;
+      height: 100%;
+      text-indent: 20rem/@base;
+      .font_dpr(14px);
+    }
+  }
+
+
+
+}
+
+//底部评价公共区域
+.product_target{
+  height: 110rem/@base;
+  padding: 20rem/@base;
+  background-color: #fff;
+
+  button{
+    width: 100%;
+    height: 60rem/@base;
+    border-radius: 5rem/@base;
+    .font_dpr(16px);
+    border: 1px solid #666;
+    background-image: linear-gradient(to bottom,#f3f3f3,#ECECEC);
+  }
+}
+
+//国内折扣公共区域
+.box {
+  background-color: #fff;
+  padding: 20rem/@base;
+  .title {
+    h3 {
+      .font_dpr(14px)
+    }
+    .price {
+      color: red;
+    }
+    .infos {
+      color: #666;
+
+      a {
+        color: #4682C5;
+      }
+    }
+  }
+
+  .context {
+    margin-top: 20rem/@base;
+    .smpic {
+      img {
+        width: 282rem /@base;
+        height: 336rem/@base;
+      }
+
+    }
+
+    .conInfo {
+      overflow: hidden;
+      .font_dpr(14px)
+    }
+    .lgpic {
+      padding: 50rem/@base 0;
+      img {
+        width: 450rem/@base;
+        height: 450rem/@base;
+        margin: 0 auto;
+      }
+
+    }
+  }
+  .city {
+    margin-top: 20rem/@base;
+    ul {
+      width: 276rem/@base;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 1px 1px #ccc;
+
+      li {
+        border-top: 1px dashed #ccc;
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+      a {
+        display: block;
+        height: 42rem/@base;
+        line-height: 42rem/@base;
+        .font_dpr(14px);
+        padding: 0 20rem/@base;
+
+        strong {
+          float: right;
+          color: #F27B04;
+        }
+      ;
+      }
+    }
+  }
+
+  .goBuy {
+    padding: 20rem/@base;
+    a {
+      display: block;
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      text-align: center;
+      .font_dpr(14px);
+      background-color: #FF9000;
+      border-radius: 5rem/@base;
+      color: #fff;
+    }
+  }
+
+  .comment {
+
+    .tit {
+      padding: 20rem/@base 0;
+      line-height: 50rem/@base;
+      .font_dpr(16px)
+    }
+    .reply {
+      border: 1px solid #ccc;
+      textarea {
+        width: 100%;
+        height: 150rem/@base;
+        .font_dpr(14px);
+        resize: none;
+      }
+
+      .ctrl {
+        height: 70rem/@base;
+        background-color: #fbfbfb;
+        text-align: right;
+        input {
+          width: 200rem/@base;
+          height: 100%;
+          background-color: #ff9900;
+          .font_dpr(14px);
+          color: #fff;
+          border-radius: 5rem/@base;
+        }
+      }
+    }
+    .list {
+
+      li {
+        padding: 20rem/@base 0;
+      }
+      .userimg {
+        float: left;
+
+        img {
+          width: 100rem/@base;
+          height: 100rem/@base;
+          border-radius: 50%;
+        }
+      }
+      .con {
+        overflow: hidden;
+        padding-left: 20rem/@base;
+        .name {
+          padding-bottom: 10rem/@base;
+          .font_dpr(14px);
+        }
+        .username {
+          color: #5997c0;
+          float: left;
+        }
+        .time {
+          float: right;
+        }
+        .content {
+          .font_dpr(14px);
+
+          img {
+            display: inline-block;
+            width: 22rem/@base;
+            height: 22rem/@base;
+          }
+        }
+      }
+    }
+  }
+
+}

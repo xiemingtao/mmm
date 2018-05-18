@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/inlandproduct.css">
+  <title>国内折扣</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <a href="index.html" class="icon_back">
+      <img src="images/icback.svg" alt="">
+    </a>
+    <div class="header_title">
+      <h3>国内折扣</h3>
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  
+  <div class="box">
+  
+  </div>
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/inlandproduct.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script type="text/template" id="inlandproductTpl">
+  {{each result v i}}
+  <div class="title">
+    <h3>{{v.productName}}</h3>
+    <p class="price">{{v.productPrice}} </p>
+    <div class="infos">
+      <span>{{v.productFrom}}</span>
+      <span>{{v.productTime}}</span>
+      <span>{{v.productTips}}</span>
+      <a href="#">{{v.productComCount}}</a>
+    </div>
+  </div>
+  <div class="context clearfix">
+    <div class="smpic fr">
+      {{# v.productImg}}
+    </div>
+    <div class="conInfo">
+      {{v.productInfo}}
+    </div>
+    <div class="lgpic">
+      {{# v.productImg}}
+    </div>
+  </div>
+  {{if v.productCity}}
+  <div class="city">{{# v.productCity}}</div>
+  {{/if}}
+  <div class="goBuy">
+    <a href="javascript:;">
+      前往购买
+    </a>
+  </div>
+  <div class="comment">
+    {{# v.productComment}}
+  </div>
+  
+  <div class='mbNav'>
+    <ul class="clearfix">
+      <li><a href="index.html">首页></a></li>
+      <li><a href="inlanddiscount.html">超值推荐></a></li>
+      <li><a href="javascript:;" class="txt-cut">{{result[0].productName}}</a></li>
+    </ul>
+  </div>
+  {{/each}}
+
+</script>
