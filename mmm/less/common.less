@@ -41,7 +41,7 @@
 
 //底部
 .mm_footer {
-  margin-top: 50rem/@base;
+  padding-top: 50rem/@base;
   .target_list {
     border-bottom: 1px solid #c4c4c4;
     border-top: 1px solid #c4c4c4;
@@ -410,4 +410,48 @@
     }
   }
 
+}
+
+//区域滚动导航栏公用区域
+.bcjNav {
+  background-color: #fff;
+  overflow: hidden;
+  .warp {
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    a {
+      display: block;
+      line-height: 80rem/@base;
+      height: 80rem/@base;
+      .font_dpr(14px);
+      padding:0 15rem/@base;
+      &.current {
+        border-bottom: 2px solid #F4483E;
+        color: #F4483E;
+      }
+    }
+  }
+
+  .bcjsearch {
+    float: right;
+    padding: 15rem/@base;
+    img {
+      width: 48rem/@base;
+      height: 48rem/@base;
+    }
+
+  }
+}
+
+
+//品牌大全列表头部
+.brand_title {
+  padding: 15rem/@base;
+  .font_dpr(14px);
+  margin: 15rem/@base 10rem/@base;
+  color: #874604;
+  background-color: #eee;
+  border: 1px solid #ccc;
 }

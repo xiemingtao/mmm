@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <title>品牌大全</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <div class="logo fl">
+      <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+    
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  <!--搜索-->
+  <div class="mm_seaech">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+  <div class="brand_sort">
+    <!--品牌排行坑-->
+  
+  </div>
+  <div class="brand_sell">
+    
+    <!--销售排行坑-->
+  </div>
+  <div class="brand_comment">
+  <!--评论坑-->
+  
+  
+  </div>
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="lib/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/brand.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<!--品牌排行模板-->
+<script type='text/template' id="brandSortTpl">
+  <h3 class=sort_title>{{name}}那个牌子好</h3>
+  
+  <ul class="sort_list">
+    {{each result v i}}
+    <li>
+      <a href="productlist.html?categoryId={{v.categoryId}}">
+        <div class="sort fl">
+          <span class="{{i==0?'red':''}}{{i==1?'orange':''}}{{i==2?'green':''}}">{{i+1}}</span>
+        </div>
+        <div class="txt">
+          <p class="txt_top">{{v.brandName}}</p>
+          <p class='txt_num'>{{v.brandInfo}}</p>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+
+</script>
+<!--销售排行模板-->
+<script type="text/template" id="brandSellTpl">
+  <h3 class="sell_title">{{name}}产品销量排行</h3>
+  <ul class="sell_list">
+    {{each result v i}}
+    <li>
+      <a href="product.html?productid={{v.productListId}}&categoryId={{v.categoryId}}&name={{v.productName}}">
+        <div class="list_img fl">{{# v.productImg}}</div>
+        <div class="list_info">
+          <p class="info_title">{{v.productName}}</p>
+          <div class="info_price">
+            <span class="fr star"></span>
+            <span class="price">{{v.productPrice}}</span>
+          </div>
+          <div class="info_bot">
+            <span>{{v.productQuote}}</span>
+            <span>{{v.productCom}}</span>
+          </div>
+        
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </ul>
+</script>
+<!--评论模板-->
+<script type="text/template" id="brandcommentTpl">
+
+  <h3 class="comment_title">{{name}}产品销量排行</h3>
+  {{each result v i}}
+  <div class="context">
+    <div class="commoent_pro">
+      <div class="list_img fl">{{# v.img.img}}</div>
+      <div class="list_info">
+        <p class="info_title">{{v.img.proname}}</p>
+      </div>
+    </div>
+    <div class="comment_txt">
+      <div class="txt_title clearfix">
+        <span class="user fl">{{v.comName}}</span>
+        <span class="star fl"></span>
+        <span class='date fr'>{{v.comTime}}</span>
+      </div>
+      <p>{{v.comContent}}</p>
+    </div>
+  </div>
+  {{/each}}
+</script>
+
+

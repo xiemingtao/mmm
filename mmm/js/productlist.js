@@ -1,7 +1,7 @@
 $(function () {
 //    根据地址栏获取商品分类ID  回去数据
-  var id = getSearch('categoryId');
-  var productNmae = getSearch('name');
+  var id = getSearch('categoryId') || 1;
+  var productNmae = getSearch('name') || '请选择';
   //定义一个翻页变量
   var currentPage = getSearch('pageid') || 1;
   render()
@@ -68,6 +68,6 @@ $(function () {
   $('.selecList').change(function () {
     var sizeNum = $(this).val()
     currentPage = sizeNum;
-   location.href = 'productlist.html?categoryId=0&name=电视&pageid=' + currentPage
+    location.href = 'productlist.html?categoryId=0&name=电视&pageid=' + currentPage
   })
 })

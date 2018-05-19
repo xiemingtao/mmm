@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+  <title>凑单品</title>
+</head>
+<body>
+<div class="container">
+  <!--头部-->
+  <div class="mm_header">
+    <a href="index.html" class="icon_back">
+      <img src="images/icback.svg" alt="">
+    </a>
+    <div class="header_title">
+      <h3>凑单品</h3>
+    </div>
+    <div class="appDow fr">
+      <a href=""><img src="images/header_app.png" alt=""></a>
+    
+    </div>
+  </div>
+  
+  <div class="bcjNav">
+    <div class="bcjsearch">
+      <img src="./images/search-icon.png" alt="">
+    </div>
+    <div class="warp" id="wrapper">
+      <ul class='clearfix'>
+        <li><a href="javascript:;" class="shop_btn">京东 <i></i></a></li>
+        <li><a href="javascript:;" class="city_btn">华北 <i></i></a></li>
+        <li><a href="javascript:;" class="pri_btn">全部价格 <i></i></a></li>
+      </ul>
+    </div>
+    <div class="warpList">
+    
+    
+    </div>
+  
+  
+  </div>
+  
+  <!--liebiao-->
+  <div class="content_list">
+    <ul class='clearfix'>
+      <!--<li><a href="#">-->
+      <!--<img src="" alt="">-->
+      <!--<p class='title'>12222222222222222</p>-->
+      <!--<p class='prc'>-->
+      <!--<span class=price>222</span>-->
+      <!--<span></span>-->
+      <!--</p>-->
+      <!--</a></li>-->
+    </ul>
+  </div>
+  <!--底部-->
+  <div class="mm_footer">
+    <ul class='target_list clearfix'>
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#"><img src="images/top.jpg" alt="">返回顶部</a></li>
+    </ul>
+    <div class="footer_mes">
+      <p>
+        <a href="#" class="current">手机App下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">掌上比价平台</a>
+      </p>
+      <p><a href="#">手机app下载</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<script src="lib/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/gsproduct.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script type="text/template" id='warpListTpl'>
+  {{each result v i}}
+  <a href="#" data-shopId="{{v.shopId}}">{{v.shopName}} <i></i></a>
+  {{/each}}
+</script>
+<script type="text/template" id="cityTpl">
+  {{each result v i}}
+  <a href="#" data-areaId="{{v.areaId}}">{{v.areaName}} <i></i></a>
+  {{/each}}
+</script>
+<script type="text/template" id=listTpl>
+  {{each result v i}}
+  <li><a href="#">
+    <img src="{{v.productImg}}" alt="">
+    <p class='title txt-cut'>{{v.productName}}</p>
+    <p class='prc clearfix'>
+      <span class=price>{{v.productPrice}}</span>
+      <span class='fr add_item'>去凑单</span>
+    </p>
+  </a></li>
+  {{/each}}
+</script>

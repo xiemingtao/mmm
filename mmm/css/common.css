@@ -12,7 +12,7 @@ ol {
   max-width: 750px;
   min-width: 320px;
   margin: 0 auto;
-  background-color: #eeeeee;
+  background-color: #f7f7f7;
 }
 a:link,
 a:visited,
@@ -114,7 +114,7 @@ body {
   font-size: 42px;
 }
 .mm_footer {
-  margin-top: 0.66666667rem;
+  padding-top: 0.66666667rem;
 }
 .mm_footer .target_list {
   border-bottom: 1px solid #c4c4c4;
@@ -538,4 +538,53 @@ body {
   display: inline-block;
   width: 0.29333333rem;
   height: 0.29333333rem;
+}
+.bcjNav {
+  background-color: #fff;
+  overflow: hidden;
+}
+.bcjNav .warp {
+  overflow: hidden;
+}
+.bcjNav li {
+  float: left;
+}
+.bcjNav li a {
+  display: block;
+  line-height: 1.06666667rem;
+  height: 1.06666667rem;
+  font-size: 14px;
+  padding: 0 0.2rem;
+}
+[data-dpr="2"] .bcjNav li a {
+  font-size: 28px;
+}
+[data-dpr="3"] .bcjNav li a {
+  font-size: 42px;
+}
+.bcjNav li a.current {
+  border-bottom: 2px solid #F4483E;
+  color: #F4483E;
+}
+.bcjNav .bcjsearch {
+  float: right;
+  padding: 0.2rem;
+}
+.bcjNav .bcjsearch img {
+  width: 0.64rem;
+  height: 0.64rem;
+}
+.brand_title {
+  padding: 0.2rem;
+  font-size: 14px;
+  margin: 0.2rem 0.13333333rem;
+  color: #874604;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+[data-dpr="2"] .brand_title {
+  font-size: 28px;
+}
+[data-dpr="3"] .brand_title {
+  font-size: 42px;
 }

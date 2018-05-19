@@ -1,7 +1,7 @@
 $(function () {
   
-  var id = getSearch('productId');
-  console.log(id);
+  var id = getSearch('productId')||20;
+  
 
 //    发送ajax请求数据
   $.ajax({

@@ -32,7 +32,7 @@ function getSearch(key) {
 
 function Api(){
   /* 自己本地IP加上项目端口号 */
-  this.base = 'http://192.168.45.26:9999';
+  this.base = 'http://192.168.45.33:9999';
   
   /*首页接口地址管理*/
   this.getindexmenu = this.base + '/api/getindexmenu';
