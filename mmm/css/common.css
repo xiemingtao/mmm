@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
 }
 ul,
 ol {
@@ -550,7 +550,7 @@ body {
   float: left;
 }
 .bcjNav li a {
-  display: block;
+  display: inline-block;
   line-height: 1.06666667rem;
   height: 1.06666667rem;
   font-size: 14px;

@@ -11,11 +11,11 @@
 <div class="container">
   <!--头部-->
   <div class="mm_header">
-    <a href="index.html" class="icon_back">
+    <a href="javascript:history.go(-1)" class="icon_back">
       <img src="images/icback.svg" alt="">
     </a>
     <div class="header_title">
-      <h3>优惠券</h3>
+    
     </div>
     <div class="appDow fr">
       <a href=""><img src="images/header_app.png" alt=""></a>
@@ -27,7 +27,6 @@
   <ul class="productList">
   
   </ul>
- 
   
   
   <!--底部-->
@@ -46,7 +45,7 @@
       <p><a href="#">手机app下载</a></p>
     </div>
   </div>
- 
+
 </div>
 <!--模态框-->
 <div class="modal">
@@ -54,7 +53,7 @@
 </div>
 </body>
 </html>
-<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/jquery.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/couponproduct.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
@@ -76,5 +75,11 @@
     </a>
   </li>
   {{ /each}}
+</script>
+<script type="text/template" id=titleTpl>
+  {{each result v i}}
+  <h3>{{name}}优惠券</h3>
+  
+  {{/each}}
 </script>
 

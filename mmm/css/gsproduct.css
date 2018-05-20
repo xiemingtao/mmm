@@ -8,25 +8,40 @@ body {
 [data-dpr="3"] body {
   font-size: 42px;
 }
+.bcjNav {
+  position: relative;
+  overflow: visible;
+}
+.warp {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
 .warp li {
   float: left;
   width: 33.3%;
   text-align: center;
-  border-bottom: 1px solid #eee;
-  border-right: 1px solid #eee;
+  position: relative;
+}
+.warp li a {
+  padding: 0;
 }
 .warp li i {
+  position: absolute;
   display: inline-block;
   width: 0;
   height: 0;
   border: 0.13333333rem solid transparent;
   border-bottom: 0.13333333rem solid #000000;
-  margin-bottom: 0.06666667rem;
-  margin-left: 0.06666667rem;
+  top: 0.33333333rem;
+  margin-left: 0.13333333rem;
 }
 .warpList {
   display: none;
-  box-shadow: 0px 3px 5px 2px #ccc;
+  width: 100%;
+  position: absolute;
+  box-shadow: 0px 0.08rem 0.16rem #dddddd;
+  background-color: #fff;
+  z-index: 111;
 }
 .warpList a {
   position: relative;
@@ -46,6 +61,36 @@ body {
 .warpList a i.img {
   background: url(../images/on.png) right center no-repeat;
   background-size: 32px 32px;
+}
+.warpCity {
+  display: none;
+  width: 100%;
+  position: absolute;
+  box-shadow: 0px 0.08rem 0.16rem #dddddd;
+  background-color: #fff;
+  z-index: 111;
+}
+.warpCity a {
+  position: relative;
+  display: block;
+  line-height: 1.06666667rem;
+  height: 1.06666667rem;
+  padding: 0 0.4rem;
+  border-bottom: 1px solid #ccc;
+}
+.warpCity a i {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  right: 0.4rem;
+  top: 0.32rem;
+  position: absolute;
+}
+.warpCity a i.img {
+  background: url(../images/on.png) right center no-repeat;
+  background-size: 32px 32px;
+}
+.hidden {
+  display: none;
 }
 .content_list {
   background-color: #f7f7f7;

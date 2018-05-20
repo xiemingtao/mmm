@@ -148,7 +148,7 @@ body {
   width: 100%;
   display: inline-block;
   padding: 0.4rem 0.13333333rem;
-  background-color: #F2F2F2;
+  background-color: #fff;
 }
 .brand_comment .comment_title {
   padding: 0 0.26666667rem;
@@ -188,17 +188,30 @@ body {
   padding: 0.26666667rem;
   border: 1px solid #e7e7e7;
   position: relative;
-  background-color: #fff;
+  background-color: #f8f8f8;
+}
+.brand_comment .comment_txt:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 0.13333333rem solid transparent;
+  border-left: 0.13333333rem solid transparent;
+  border-bottom: 0.26666667rem solid #e7e7e7;
+  top: -0.29333333rem;
+  left: 0.66666667rem;
 }
 .brand_comment .comment_txt:after {
   content: '';
   position: absolute;
   width: 0;
   height: 0;
-  border: 0.13333333rem solid transparent;
-  border-bottom-color: #fff;
+  border-right: 0.13333333rem solid transparent;
+  border-left: 0.13333333rem solid transparent;
+  border-bottom: 0.26666667rem solid #f8f8f8;
   top: -0.26666667rem;
   left: 0.66666667rem;
+  z-index: 333;
 }
 .brand_comment .comment_txt p {
   font-size: 14px;

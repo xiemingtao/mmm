@@ -34,7 +34,7 @@
     <!--销售排行坑-->
   </div>
   <div class="brand_comment">
-  <!--评论坑-->
+    <!--评论坑-->
   
   
   </div>
@@ -110,14 +110,22 @@
 </script>
 <!--评论模板-->
 <script type="text/template" id="brandcommentTpl">
-
+  
   <h3 class="comment_title">{{name}}产品销量排行</h3>
   {{each result v i}}
   <div class="context">
     <div class="commoent_pro">
-      <div class="list_img fl">{{# v.img.img}}</div>
+      <div class="list_img fl">
+        {{if v.img}}
+        {{# v.img.img}}
+        {{else}}
+        {{ }}
+        {{/if}}
+      </div>
       <div class="list_info">
-        <p class="info_title">{{v.img.proname}}</p>
+        <p class="info_title">
+          {{v.img?v.img.proname:''}}
+        </p>
       </div>
     </div>
     <div class="comment_txt">

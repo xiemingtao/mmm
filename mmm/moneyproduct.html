@@ -11,7 +11,7 @@
 <div class="container">
   <!--头部-->
   <div class="mm_header">
-    <a href="index.html" class="icon_back">
+    <a href="javascript:history.go(-1)" class="icon_back">
       <img src="images/icback.svg" alt="">
     </a>
     <div class="header_title">
@@ -23,9 +23,9 @@
     </div>
   </div>
   
- <div class="box">
- 
- </div>
+  <div class="box">
+  
+  </div>
   
   <!--底部-->
   <div class="mm_footer">
@@ -46,7 +46,7 @@
 </div>
 </body>
 </html>
-<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/jquery.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/moneyproduct.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
@@ -82,7 +82,7 @@
   <div class="comment">
     {{# v.productComment}}
   </div>
-
+  
   <div class='mbNav'>
     <ul class="clearfix">
       <li><a href="index.html">首页></a></li>
@@ -91,5 +91,5 @@
     </ul>
   </div>
   {{/each}}
-  
+
 </script>

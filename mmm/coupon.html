@@ -50,13 +50,13 @@
 </div>
 </body>
 </html>
-<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/jquery.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/coupon.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script type="text/template" id="cpTpl">
   {{each result v i}}
-  <a href="{{v.couponLink}}?couponId={{v.couponId}}">
+  <a href="{{v.couponLink}}?couponId={{v.couponId}}&name={{v.couponTitle}}">
     <img src="{{v.couponImg}}" alt="">
     <p>{{v.couponTitle}}</p>
   </a>
